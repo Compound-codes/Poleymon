@@ -1,0 +1,126 @@
+<%- include("partials/header") %>
+
+<body id="world3">
+    <h1>Poley mon moment</h1>
+    <br>
+    <h4>World 1-3</h4>
+    <br>
+    <img id="poleyimg" src="poleys/poley.png">
+
+    <button id="changePoley" onclick="cPchangePoley(poleysWorld3); startNotDisabled()">Collect Poley!</button>
+    <h3 id="poleygot">You just got:</h3>
+    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
+        aria-controls="offcanvasWithBothOptions">show poleys</button>
+    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#shinyPoleys"
+        aria-controls="shinyPoleys">Show shinys</button>
+    <br>
+    <!-- <br>
+    <button onclick="save()" class="btn-save">Save code?</button>
+    <button onclick="load()" class="btn-save">Load code?</button> -->
+    <br>
+    <div id="worldLink"></div>
+    <br>
+    <button class="worldLink btn"><a href="./world2">Back to world 2!</a></button>
+
+
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+        aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Poley Backpack</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div id="hatPoleyCounter">
+                <img class="sill" src="poleys/hatPoley.png" alt="">
+                <h5>Hat Poley</h5>
+            </div>
+            <div id="bartenderPoleyCounter">
+                <img class="sill" src="poleys/bartenderPoley.png" alt="">
+                <h5>Bartender Poley</h5>
+            </div>
+            <div id="trainPoleyCounter">
+                <img class="sill" src="poleys/trainPoley.png" alt="">
+                <h5>Train Poley</h5>
+            </div>
+            <div id="doiiCounter">
+                <img class="sill" src="poleys/doii.png" alt="">
+                <h5>doii</h5>
+            </div>
+            <div id="skateboardPoleyCounter">
+                <img class="sill" src="poleys/skateboardPoley.png" alt="">
+                <h5>Skateboard Poley</h5>
+            </div>
+            <div id="westernPoleyCounter">
+                <img class="sill" src="poleys/westernPoley.png" alt="">
+                <h5>Western Poley</h5>
+            </div>
+            <div id="invertedWatermelonPoleyCounter">
+                <img class="sill" src="poleys/invertedWatermelonPoley.png" alt="">
+                <h5>Inverted Watermelon Poley</h5>
+            </div>
+            <div id="tumbleweedPoleyCounter">
+                <img class="sill" src="poleys/tumbleweedPoley.png" alt="">
+                <h5>Tumbleweed Poley</h5>
+            </div>
+            <div id="gunPoleyCounter">
+                <img class="sill" src="poleys/gunPoley.png" alt="">
+                <h5>Gun Poley</h5>
+            </div>
+            <div id="cowboyPoleyCounter">
+                <img class="sill" src="poleys/cowboyPoley.png" alt="">
+                <h5>Cowboy Poley</h5>
+            </div>
+        </div>
+
+    </div>
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="shinyPoleys"
+        aria-labelledby="shinyPoleysLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Shiny Poley Backpack</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div id="shinyHatPoleyCounter">
+                <img class="sill" src="poleys/shinyHatPoley.png" alt="">
+                <h5>Shiny Hat Poley</h5>
+            </div>
+            <div id="shinyBartenderPoleyCounter">
+                <img class="sill" src="poleys/shinyBartenderPoley.png" alt="">
+                <h5>Shiny Bartender Poley</h5>
+            </div>
+            <div id="shinyTrainPoleyCounter">
+                <img class="sill" src="poleys/shinyTrainPoley.png" alt="">
+                <h5>Shiny Train Poley</h5>
+            </div>
+            <div id="shinyDoiiCounter">
+                <img class="sill" src="poleys/shinyDoii.png" alt="">
+                <h5>Shiny Doii</h5>
+            </div>
+            <div id="shinySkateboardPoleyCounter">
+                <img class="sill" src="poleys/shinySkateboardPoley.png" alt="">
+                <h5>Shiny Skateboard Poley</h5>
+            </div>
+            <div id="shinyWesternPoleyCounter">
+                <img class="sill" src="poleys/shinyWesternPoley.png" alt="">
+                <h5>Shiny Western Poley</h5>
+            </div>
+            <div id="shinyInvertedWatermelonPoleyCounter">
+                <img class="sill" src="poleys/shinyInvertedWatermelonPoley.png" alt="">
+                <h5>Shiny Inverted Watermelon Poley</h5>
+            </div>
+            <div id="shinyTumbleweedPoleyCounter">
+                <img class="sill" src="poleys/shinyTumbleweedPoley.png" alt="">
+                <h5>Shiny Tumbleweed Poley</h5>
+            </div>
+            <div id="shinyGunPoleyCounter">
+                <img class="sill" src="poleys/shinyGunPoley.png" alt="">
+                <h5>Shiny Gun Poley</h5>
+            </div>
+            <div id="shinyCowboyPoleyCounter">
+                <img class="sill" src="poleys/shinyCowboyPoley.png" alt="">
+                <h5>Shiny Cowboy Poley</h5>
+            </div>
+        </div>
+    </div>
+</body>
+<%- include("partials/footer") %>

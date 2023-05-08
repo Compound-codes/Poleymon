@@ -1,0 +1,131 @@
+<%- include("partials/header") %>
+
+<body id="world2">
+    <h1>Poley mon moment</h1>
+    <br>
+    <h4>World 1-2</h4>
+    <br>
+
+    <img id="poleyimg" src="poleys/poley.png">
+    <br>
+    <p>Get <span id="counter">20</span> poleys to go to next world!</p>
+
+    <button id="changePoley" onclick="cPchangePoley(poleysWorld2); startNotDisabled(); count('world3')">Collect
+        Poley!</button>
+    <h3 id="poleygot">You just got:</h3>
+    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
+        aria-controls="offcanvasWithBothOptions">show poleys</button>
+    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#shinyPoleys"
+        aria-controls="shinyPoleys">Show shinys</button>
+    <br>
+    <br>
+    <button onclick="save()" class="btn-save">Save code?</button>
+    <button onclick="load()" class="btn-save">Load code?</button>
+    <br>
+    <br>
+    <div id="worldLink"></div>
+    <br>
+    <button class="worldLink btn"><a href="./world1">Back to world 1!</a></button>
+
+
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+        aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Poley Backpack</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div id="treePoleyCounter">
+                <img class="sill" src="poleys/treePoley.png" alt="">
+                <h5>Tree Poley</h5>
+            </div>
+            <div id="logPoleyCounter">
+                <img class="sill" src="poleys/logPoley.png" alt="">
+                <h5>Log Poley</h5>
+            </div>
+            <div id="rainPoleyCounter">
+                <img class="sill" src="poleys/rainPoley.png" alt="">
+                <h5>Rain Poley</h5>
+            </div>
+            <div id="riverPoleyCounter">
+                <img class="sill" src="poleys/riverPoley.png" alt="">
+                <h5>River Poley</h5>
+            </div>
+            <div id="sunPoleyCounter">
+                <img class="sill" src="poleys/sunPoley.png" alt="">
+                <h5>Sun Poley</h5>
+            </div>
+            <div id="moonPoleyCounter">
+                <img class="sill" src="poleys/moonPoley.png" alt="">
+                <h5>Moon Poley</h5>
+            </div>
+            <div id="starPoleyCounter">
+                <img class="sill" src="poleys/starPoley.png" alt="">
+                <h5>Star Poley</h5>
+            </div>
+            <div id="ghostPoleyCounter">
+                <img class="sill" src="poleys/ghostPoley.png" alt="">
+                <h5>Ghost Poley</h5>
+            </div>
+            <div id="stonePoleyCounter">
+                <img class="sill" src="poleys/stonePoley.png" alt="">
+                <h5>Stone Poley</h5>
+            </div>
+            <div id="cavePoleyCounter">
+                <img class="sill" src="poleys/cavePoley.png" alt="">
+                <h5>Cave Poley</h5>
+            </div>
+        </div>
+
+    </div>
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="shinyPoleys"
+        aria-labelledby="shinyPoleysLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Shiny Poley Backpack</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div id="shinyTreePoleyCounter">
+                <img class="sill" src="poleys/treePoley.png" alt="">
+                <h5>Shiny Tree Poley</h5>
+            </div>
+            <div id="shinyLogPoleyCounter">
+                <img class="sill" src="poleys/logPoley.png" alt="">
+                <h5>Shiny Log Poley</h5>
+            </div>
+            <div id="shinyRainPoleyCounter">
+                <img class="sill" src="poleys/rainPoley.png" alt="">
+                <h5>Shiny Rain Poley</h5>
+            </div>
+            <div id="shinyRiverPoleyCounter">
+                <img class="sill" src="poleys/riverPoley.png" alt="">
+                <h5>Shiny River Poley</h5>
+            </div>
+            <div id="shinySunPoleyCounter">
+                <img class="sill" src="poleys/sunPoley.png" alt="">
+                <h5>Shiny Sun Poley</h5>
+            </div>
+            <div id="shinyMoonPoleyCounter">
+                <img class="sill" src="poleys/moonPoley.png" alt="">
+                <h5>Shiny Moon Poley</h5>
+            </div>
+            <div id="shinyStarPoleyCounter">
+                <img class="sill" src="poleys/starPoley.png" alt="">
+                <h5>Shiny Star Poley</h5>
+            </div>
+            <div id="shinyGhostPoleyCounter">
+                <img class="sill" src="poleys/ghostPoley.png" alt="">
+                <h5>Shiny Ghost Poley</h5>
+            </div>
+            <div id="shinyStonePoleyCounter">
+                <img class="sill" src="poleys/stonePoley.png" alt="">
+                <h5>Shiny Stone Poley</h5>
+            </div>
+            <div id="shinyCavePoleyCounter">
+                <img class="sill" src="poleys/cavePoley.png" alt="">
+                <h5>Shiny Cave Poley</h5>
+            </div>
+        </div>
+    </div>
+</body>
+<%- include("partials/footer") %>
