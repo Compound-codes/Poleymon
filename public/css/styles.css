@@ -1,18 +1,69 @@
+/** ------------------- TAGS ------------------- */
+
+body {
+    text-align: center;
+    background-color: #2C3333;
+    color: #CBE4DE;
+    font-family: 'Quicksand', sans-serif;
+    overflow-x: hidden;
+}
+
 img {
     width: 6rem;
     height: 6rem;
 }
+
+hr {
+    border-width: 30px;
+}
+
+aside {
+    height: 100%; 
+    width: 23vw; 
+    position: absolute; 
+    z-index: 1; 
+    top: 0; 
+    right: 0;
+    background-color: #CBE4DE; 
+    border-left: #7f7f7f solid 10px;
+    padding-top: 20px;
+    bottom: 0;
+    overflow: scroll;
+    color: #2C3333;
+}
+
+aside:not(.firstAside) {
+    background-color: #245152;
+    color: white;
+    left: 0;
+}
+
+select {
+    height: 2rem;
+    font-size: 20px;
+}
+
+button {
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    border: #2C3333;
+
+}
+
+audio {
+    width: 150px;
+}
+
+/** --------------- CLASSES ------------------ */
 
 .bigImage {
     width: 12rem;
     height: 12rem;
 }
 
-body {
-    text-align: center;
-    background-color: #2C3333;
-    color: #CBE4DE;
-    font-family: 'Courier New', Courier, monospace;
+.gone {
+    display: none;
 }
 
 .left-side {
@@ -21,51 +72,101 @@ body {
     width: 10%;
 }
 
+.searchedPoley {
+    border-radius: 0;
+    margin: 10px;
+}
+
+.searcheybutton {
+    width: 40%;
+    height: 0.5%;
+    text-align: center;
+    font-size: 15px;
+    background-color: #245152;
+    color: #fff;
+}
+
 .sill {
     filter: brightness(0);
 }
 
-.btn {
+.sellButton {
+    padding: 0;
+    width: 50px;
+    border-radius: 0;
+    height: 40px;
+}
+
+.save {
+    margin: 30px;
+    height: 300px;
+    background-color: #2F3E75;
+
+}
+
+/** Achievements */
+
+.achievement {
+    text-align: center;
+    width: 20%;
+    height: 15%;
+    left: 10%;
+    padding: 5% 0.5%;
+    top: 5%;
+    color: black;
+    position: absolute;
+    z-index: 1;
+}
+
+.achieveAnimation {
+    animation-name: achievement;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+@keyframes achievement {
+    from {top: 0}
+    to {top: 5%}
+}
+/** ---------------- IDS ------------------- */
+
+#dangerZone {
+    color: red;
+}
+
+/** Description */
+
+#description {
+    background-color: #52686A;
+    position: absolute;
+    bottom: 0;
+    left: 23vw;
+    right: 23vw;
+    height: 20rem;
+    border-radius: 5%;
+    margin: 3vw;
+    text-align: left;
+    top: 20rem;
+}
+
+#description h1 {
+    text-align: center;
+}
+
+#description img {
+    margin-left: 50px;
+}
+
+#description p {
     font-size: 20px;
-    padding: 10px 20px 10px 20px;
-    border-radius: 10px;
-    border: #2C3333;
-
 }
 
-.btn-save {
-    background: #ffdb26;
-    background-image: -webkit-linear-gradient(top, #ffdb26, #48c26e);
-    background-image: -moz-linear-gradient(top, #ffdb26, #48c26e);
-    background-image: -ms-linear-gradient(top, #ffdb26, #48c26e);
-    background-image: -o-linear-gradient(top, #ffdb26, #48c26e);
-    background-image: linear-gradient(to bottom, #ffdb26, #48c26e);
-    -webkit-border-radius: 10;
-    -moz-border-radius: 10;
-    border-radius: 10px;
-    font-family: Courier New;
-    color: #ffffff;
-    font-size: 20px;
-    padding: 10px 20px 10px 20px;
-    text-decoration: none;
-}
-
-.btn-save:hover {
-    background: #778a65;
-    text-decoration: none;
-}
-
-.worldLink {
-    text-decoration: none;
-    color: white;
-    background-color: #9E7676;
-    padding: 5px;
-    font-size: 20px;
-}
+/** worlds */
 
 #world1 {
     background-color: #9E7676;
     color: whitesmoke;
+
 }
 
 #world2 {
@@ -78,23 +179,17 @@ body {
     color: whitesmoke;
 }
 
-aside {
-    height: 100%; 
-    width: 20vw; 
-    position: fixed; 
-    z-index: 1; 
-    top: 0; 
-    right: 0;
-    background-color: #CBE4DE; 
-    border-left: #7f7f7f solid 10px;
-    padding-top: 20px;
-    bottom: 0;
-    overflow: scroll;
-    color: #2C3333;
-    /*this entire thing is all stack overflow code*/
+
+/** ------------- RESPONSIVE TAGS -------------  */
+
+@media screen and (max-width: 700px) {
+    * {
+        display: none;
+    }
 }
 
-a {
-    color: whitesmoke;
-    text-decoration: none;
+@media screen and (max-height: 670px) {
+    aside {
+        height: 200%;
+    }
 }

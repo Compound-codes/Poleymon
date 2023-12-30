@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Poleymon!</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="public/bootstrap/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="public/css/styles.css">
+    <script src="public/js/data.js"></script>
+    <script src="public/js/game.js" async defer></script>
+    <link rel="shortcut icon" href="public/poleys/poley.png" type="image/x-icon">
+
+</head>
+
+<body onload="search()">
+    <strong>
+        <h1>Poley mon moment</h1>
+    </strong>
+    <br>
+    <img id="poleyimg" src="public/poleys/poley.png">
+    <button id="changePoley" onclick="collectPoleyHooray(poleys)">Collect Poley!</button>
+
+
+    <h3 id="poleygot">You just got:</h3>
+    <br>
+    <!-- Poley Backpack -->
+    <aside>
+        <p>Press [ to close <button onclick="search()" class="searcheybutton">Reload</button></p>
+        <div class="searched">
+            <img src="public/Images/search.png" alt="">
+            <input type="text" oninput="search()" id="searchBar">
+        </div>
+        <div id="backpack">
+        </div>
+        <br>
+        <button onclick="search()" class="searcheybutton">Reload</button></p>
+    </aside>
+    <!-- ? how to use search? -->
+
+    <aside class="firstAside">
+        <p>press ] to open shop</p>
+        <img src="public/Images/audio.png" alt="audio">
+        <input type="range" name="soundSlider" min="0.01" max="1" id="soundSlider" onchange="changeVolume()" value="1" step="0.01">
+        <br>
+        <hr>
+        <div id="dangerZone">
+            <strong>
+                <h1>DANGER ZONE</h1>
+            </strong>
+            <button onclick="clearSave()">Clear Save</button>
+        </div>
+    </aside>
+    <aside class="firstAside">
+        <p>press ] to open settings</p>
+        <select name="poleyWorld" id="poleyWorldSelection" onchange="pickWorld()">
+            <option value="home">Poley</option>
+            <option value="1">With Item Skap</option>
+            <option value="2">Item Skap</option>
+            <option value="3">Outdoorsy Skap</option>
+            <option value="4">Astronomy Skap</option>
+            <option value="5">Magical Skap</option>
+            <option value="6">Types of Skap</option>
+            <option value="7">Animal Skap</option>
+            <option value="8">Food Skap</option>
+            <option value="9">Other Skap</option>
+            <option value="10">Alphabetical Skap</option>
+            <option value="11">Alphabetical Skap 2</option>
+
+        </select>
+        <h3>You have <span class="poleycoin">0 </span>Poleycoin</h3>
+    </aside>
+
+    <div id="description">
+        <h1><span id="descName">Did you know?</span></h1>
+        <div class="row">
+            <div class="col-6">
+                <img id="descImg" src="public/poleys/poley.png" class="bigImage">
+            </div>
+            <!--TODO: Add a reload button and function that will reload the counter  -->
+            <div class="col-6">
+                <ul>
+                    <li>
+                        <p><span id="descCounter">Poley is a polar bear</span></p>
+                    </li>
+                    <li>
+                        <p id="desc"><audio controls src="./public/music/Poleyisapolarbear.mp3"></audio></p>
+                    </li>
+                    <li>
+                        <p><span id="descRarity">and poley is coolio!</span></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="achievement gone" id="100poleys">
+        <img src="public/Images/100Poleys.png" alt="100 poleys">
+        <!-- ? It look bad. why man -->
+    <!-- </div> -->
+</body>
+
+</html>
