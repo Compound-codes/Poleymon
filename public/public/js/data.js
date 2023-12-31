@@ -198,7 +198,7 @@ function describe(poleyay, shiny = false) {
             //  + "<br><button onclick='sell()' class='sellButton'>Sell?</button"
         }
     }
-    let img = "public/poleys/" + name.replaceAll(" ", "") + ".png";
+    let img = "public/poleys/" + decapitalize(name.replaceAll(" ", "")) + ".png";
     console.log(img);
     descImg.prop("src", img);
     descName.html(name);
@@ -272,7 +272,10 @@ function describe(poleyay, shiny = false) {
 
 function capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
+}
 
+function decapitalize(str) {
+  return str.charAt(0).toLowerCase() + str.slice(1);
 }
 
 setInterval(function () {
