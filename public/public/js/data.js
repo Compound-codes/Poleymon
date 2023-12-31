@@ -176,6 +176,7 @@ function describe(poleyay, shiny = false) {
     }
     let ourPoleything = eval(poleyay);
     let name = capitalize(ourPoleything.name);
+    console.log(name);
     let description = "\"" + ourPoleything.description + "\"";
     let rarity = Math.round(ourPoleything.rarity*100)/100
     if (!shiny) {
@@ -198,6 +199,7 @@ function describe(poleyay, shiny = false) {
         }
     }
     let img = "public/poleys/" + name.replaceAll(" ", "") + ".png";
+    console.log(img);
     descImg.prop("src", img);
     descName.html(name);
     desc.text(description);
@@ -270,7 +272,7 @@ function describe(poleyay, shiny = false) {
 
 function capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
-    
+
 }
 
 setInterval(function () {
